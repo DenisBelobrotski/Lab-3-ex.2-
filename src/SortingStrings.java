@@ -1,11 +1,7 @@
-import java.io.IOException;
 import java.util.*;
 
-/**
- * Created by DENIS on 09.09.2016.
- */
 class SortingStrings {
-    public static void sortText(){
+    public static void sortText() {
         try {
             List<String> list = new ArrayList<String>();
             String string = new String(" ");
@@ -24,28 +20,28 @@ class SortingStrings {
             sortStringsInList(list);
             System.out.println("Words after sorting:");
             output(list);
-        }
-        catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("Input exception");
-        }
-        catch (NoSuchElementException e){
+        } catch (NoSuchElementException e) {
             System.out.println("Error when searching for an element in the container");
         }
     }
-    public static void output(List<String> list){
+
+    public static void output(List<String> list) {
         Iterator<String> it = list.iterator();
         int i = 0;
-        while(it.hasNext()){
+        while (it.hasNext()) {
             System.out.print(it.next() + " ");
             i++;
-            if(i == 7){
+            if (i == 7) {
                 i = 0;
                 System.out.println();
             }
         }
         System.out.println();
     }
-    public static void sortStringsInList(List<String> list){
+
+    public static void sortStringsInList(List<String> list) {
         Collections.sort(list);
     }
 }
