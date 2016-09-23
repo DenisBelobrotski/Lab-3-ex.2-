@@ -27,7 +27,7 @@ class SortingStrings {
         }
     }
 
-    public static void output(List<String> list) {
+    private static void output(List<String> list) {
         Iterator<String> it = list.iterator();
         int i = 0;
         while (it.hasNext()) {
@@ -41,7 +41,7 @@ class SortingStrings {
         System.out.println();
     }
 
-    public static void sortStringsInList(List<String> list) {
+    private static void sortStringsInList(List<String> list) {
         Collections.sort(list);
     }
 }
